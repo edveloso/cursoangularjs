@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Projeto Angularjs 1.x</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-controller="MainCtrl  as main">
+
+   <h2>Uso do ng-include</h2>
+
+    <div>
+    	 <h3>
+    	 	Lista de ações da bolsa de valores
+    	 </h3>
+
+    	 <div ng-repeat="acao in main.acoes">
+    	 	<div ng-include="main.template_acoes"  ></div>
+    	 </div>
+
+    </div>
+
+
+    <h2>Uso do ng-switch</h2>
+    
+    <button ng-click="main.currentTab = 'tab1'" >Tab 1</button>
+    <button ng-click="main.currentTab = 'tab2'" >Tab 2</button>
+    <button ng-click="main.currentTab = 'tab3'" >Tab 3</button>
+
+    <div ng-switch="main.currentTab">
+        <div ng-switch-when="tab1">
+            Estou na tab 1
+        </div>
+        <div ng-switch-when="tab2">
+            Estou na tab 2
+        </div>
+        <div ng-switch-when="tab3">
+            Estou na tab 3
+        </div>
+    </div>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+ <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -3,4 +3,6 @@
 	  <span class="nome-acao" ng-bind="acao.nome"></span>
 	Preço:
 	  <span class="nome-acao" ng-bind="acao.preco | currency:'R$ '"></span>	  
+	Percentual:
+	  <span class="nome-acao" ng-bind="main.getChange(acao) + '%' "></span>	  	  
 </div>
